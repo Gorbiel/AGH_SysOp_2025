@@ -160,6 +160,7 @@ lab12: socket_chat_client_2 socket_chat_server_2
 clean:
 	@rm -f $(TARGETS) $(LIBOBJ) $(STATIC_LIB) $(SHARED_LIB)
 	@rm -rf ./*.log
+	@rm -rf ./*.done
 
 cleaner: clean
 	@rm -rf reversed restored

@@ -1,22 +1,18 @@
 #!/bin/bash
 
-# Uruchom server w tle
 ./chat_server &
-
-# Pobierz PID serwera
 SERVER_PID=$!
 
-# Uruchom klientów
-./test/chat_client.sh $SERVER_PID &
-CLIENT_1_PID=$!
+CLIENT1_DONE=client1.done
+CLIENT2_DONE=client2.done
+rm -f $CLIENT1_DONE $CLIENT2_DONE
 
-./test/chat_client.sh $SERVER_PID &
-CLIENT_2_PID=$!
+gnome-terminal -- bash -c "./test/chat_client.sh $CLIENT1_DONE $SERVER_PID; exec bash" &
+gnome-terminal -- bash -c "./test/chat_client.sh $CLIENT2_DONE $SERVER_PID; exec bash" &
 
-# Poczekaj na zakończenie obu klientów
-wait $CLIENT_1_PID
-wait $CLIENT_2_PID
+while [ ! -f $CLIENT1_DONE ] || [ ! -f $CLIENT2_DONE ]; do
+    sleep 1
+done
 
-# Zakończ działanie serwera
 kill $SERVER_PID
 echo "----------------------------------------"

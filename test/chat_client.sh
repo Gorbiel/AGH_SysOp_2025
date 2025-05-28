@@ -1,21 +1,7 @@
 #!/bin/bash
+DONE_FILE="$1"
+SERVER_PID="$2"
 
-if [ -z "$1" ]; then
-  echo "Usage: $0 <SERVER_PID>"
-  exit 1
-fi
+trap "touch $DONE_FILE; exit" SIGINT SIGTERM EXIT
 
-SERVER_PID=$1
-
-# Open chat_client in new terminal
-gnome-terminal -- ./chat_client $SERVER_PID &
-
-# Wait a moment to initialize
-sleep 1
-
-# Simulate writing and sending a message
-xdotool type "Hello from client_1!"
-xdotool key Return
-
-sleep 1
-exit 0
+./chat_client "$SERVER_PID"
