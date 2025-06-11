@@ -1,0 +1,12 @@
+lab01: 1
+lab02: 0.9
+lab03: 0.9
+lab04: 1
+lab05: 1
+lab06: 1
+lab07: 0.9
+lab08: 0.9
+lab09: 1
+lab10: 1
+lab11: 1
+lab12: 1
