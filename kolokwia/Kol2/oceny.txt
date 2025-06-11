@@ -1,0 +1,3 @@
+task_1: 1/1
+task_2: 1/1 (makefile dodany po fakcie, ale podobno trzeba było go napisać, poprawione z 0.8/1 po zapytaniu się co jest nie tak XD)
+task_3: 1/1

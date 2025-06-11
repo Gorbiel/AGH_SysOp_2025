@@ -1,0 +1,48 @@
+Building the program...
+gcc -I. -Wall -pthread    -c -o main.o main.c
+gcc -o main -Wall -pthread  main.c -I.
+Running the program...
+producer: inserted 1
+producer: inserted 2
+producer: inserted 3
+producer: inserted 4
+Consume value 1
+Consume value 2
+Consume value 3
+Consume value 4
+producer: inserted 5
+producer: inserted 6
+producer: inserted 7
+producer: inserted 8
+Consume value 5
+Consume value 6
+Consume value 7
+Consume value 8
+Consume value 9
+producer: inserted 9
+producer: inserted 10
+producer: inserted 11
+producer: inserted 12
+Consume value 10
+producer: inserted 13
+Consume value 11
+Consume value 12
+Consume value 13
+Consume value 14
+producer: inserted 14
+producer: inserted 15
+producer: inserted 16
+producer: inserted 17
+Consume value 15
+Consume value 16
+Consume value 17
+Consume value 18
+producer: inserted 18
+producer: inserted 19
+producer: inserted 20
+producer quiting
+Consume value 19
+Consume value 20
+consumer quiting
+Parent quiting
+Program executed successfully.
