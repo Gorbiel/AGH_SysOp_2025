@@ -2,6 +2,11 @@
 ## Autor: Gabriel Kania
 ## Ważne informacje
 Plik README.md zawiera informacje jak budować i uruchamiać programy z laboratoriów z przedmiotu Systemy Operacyjne. Do każdego laboratorium przygotowałem krótki opis razem z ewentualnym objaśnieniem mojego rozwiązania. Pełne polecenia znajdują się w [pliku zadania.md](ZADANIA.md). Niektóre programy mogą być uruchomione na kilka sposobów - ręcznie lub za pomocą skryptu testującego (w niektórych przypadkach nie ma to znaczenia, bo skrypt testujący jest tylko wzbogacony o proste formatowanie w celach logowania do pliku). Środowisko Code zostało skonfigurowane z myślą o systemie Ubuntu - nie powinno mieć to większego znaczenie.
+
+
+Jeśli opracowanie zadań pomogło - zostaw gwiazdkę!
+
+
 ## Makefile
 Plik makefile został wzbogacony o automatyczne testy wszystkich programów wywoływany komendą
 ```bash
